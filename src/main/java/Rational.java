@@ -258,8 +258,13 @@ public class Rational
         double x = (double)this.numerator/this.denominator;
         int y = (int) x;
         double subtract = x - y;
+//        System.out.println(subtract);
         if (subtract >= 0.5){
             this.numerator = (int) ((1-subtract) + x);
+            this.denominator = 1;
+        }
+        else{
+            this.numerator = y;
             this.denominator = 1;
         }
 
